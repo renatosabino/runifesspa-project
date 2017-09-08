@@ -1,0 +1,28 @@
+.card-image-cover{
+	width: 100%;
+}
+.no-space-row{
+	margin-bottom: 0 !important;
+}
+.add-btn-flt{
+	position: relative;
+	float: right;
+	top: -15px;
+	right: 5%;
+}
+
+ /* label color */
+   .input-field label {
+     color: #ffffff;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #f50057;
+   }
+
+
+textarea.materialize-textarea:focus:not([readonly]){
+
+	border-bottom: 2px solid #f50057;
+	box-shadow: 2px solid #f50057;
+}
