@@ -44,15 +44,15 @@
 					<div class="card-title">
 						<h4 class="black-text center">Login</h4>
 					</div>
-					<form action="">
+					<form id="form-login" action="login" method="post">
 						<div class="input-field">
-							<i class="material-icons prefix black-text">account_circle</i> <input
-								class="black-text" id="icon_prefix" type="text"> <label
-								class="grey-text" for="icon_prefix">Usuário</label>
+							<i class="material-icons prefix black-text">account_circle</i> 
+							<input class="black-text" id="icon_prefix" type="text" name="username"> 
+							<label class="grey-text" for="icon_prefix">Usuário</label>
 						</div>
 						<div class="input-field">
-							<i class="material-icons prefix black-text">lock</i> <input id=""
-								type="password"> <label class="grey-text" for="lock">Senha</label>
+							<i class="material-icons prefix black-text">lock</i> <input
+								type="password" name ="pass"> <label class="grey-text" for="lock">Senha</label>
 						</div>
 						<div class="row section center">
 							<form action="#" class="col s8">
@@ -74,7 +74,7 @@
 							</form>
 						</div>
 						<div class="center">
-							<a class="waves-effect waves-light z-depth-5 btn blue"><i
+							<a class="waves-effect waves-light z-depth-5 btn blue" onclick="document.getElementById('form-login').submit();"><i
 								class="material-icons right">send</i>Login</a>
 							<div class="section">
 								<h6 class="black-text center">Ainda não possui um login?</h6>

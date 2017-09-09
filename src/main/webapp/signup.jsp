@@ -44,7 +44,7 @@
 						<h4 class="black-text center">Cadastro</h4>
 					</div>
 					<div class="row">
-						<form class="col s12">
+						<form id="form-signup" action="index.jsp" method="post" class="col s12">
 							<div class="row">
 								<div class="input-field">
 									<i class="material-icons prefix black-text">account_circle</i>
@@ -108,7 +108,7 @@
 								</div>
 							</div>
 							<div class="center">
-								<a class="waves-effect waves-light z-depth-5 btn blue">Cadastrar</a>
+								<a class="waves-effect waves-light z-depth-5 btn blue" onclick="document.getElementById('form-signup').submit();">Cadastrar</a>
 							</div>
 						</form>
 					</div>
