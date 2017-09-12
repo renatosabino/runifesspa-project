@@ -44,18 +44,18 @@
 						<h4 class="black-text center">Cadastro</h4>
 					</div>
 					<div class="row">
-						<form id="form-signup" action="index.jsp" method="post" class="col s12">
+						<form id="form-signup" action="signup-servlet" method="post" class="col s12">
 							<div class="row">
 								<div class="input-field">
 									<i class="material-icons prefix black-text">account_circle</i>
-									<input class="black-text" id="usuario" type="text"> <label
+									<input class="black-text" name="usuario" type="text"> <label
 										class="grey-text" for="usuario">Usuário</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field">
 									<i class="material-icons prefix black-text">lock</i> <input
-										id="senha" type="password"> <label class="grey-text"
+										name="senha" type="password"> <label class="grey-text"
 										for="senha">Senha</label>
 								</div>
 							</div>
@@ -63,15 +63,15 @@
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">person</i> <input
-											class="black-text" id="nome" type="text"> <label
-											class="grey-text" for="nome">Primeiro nome</label>
+											class="black-text" name="nome" type="text"> <label
+											class="grey-text" for="nome">Nome</label>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">perm_identity</i>
-										<input class="black-text" id="sobrenome" type="text">
-										<label class="grey-text" for="sobrenome">Sobrenome</label>
+										<input class="black-text" name="matricula" type="number">
+										<label class="grey-text" for="matricula">Matricula</label>
 									</div>
 								</div>
 							</div>
@@ -79,14 +79,14 @@
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">email</i> <input
-											class="black-text" id="email" type="email"> <label
+											class="black-text" name="email" type="email"> <label
 											class="grey-text" for="email">E-mail</label>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">phone</i> <input
-											class="black-text" id="telefone" type="tel"> <label
+											class="black-text" name="telefone" type="tel"> <label
 											class="grey-text" for="telefone">Telefone</label>
 									</div>
 								</div>
@@ -95,15 +95,24 @@
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">subtitles</i> <input
-											class="black-text" id="email" type="number"> <label
-											class="grey-text" for="email">RG</label>
+											class="black-text" name="rg" type="number"> <label
+											class="grey-text" for="rg">RG</label>
 									</div>
 								</div>
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">subtitles</i> <input
-											class="black-text" id="telefone" type="number"> <label
-											class="grey-text" for="telefone">CPF</label>
+											class="black-text" name="cpf" type="text"> <label
+											class="grey-text" for="cpf">CPF</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s6">
+									<div class="input-field">
+										<i class="material-icons prefix black-text">date_range</i> <input
+											class="black-text" name="nascimento" type="date"> <label
+											class="grey-text" for="nascimento"></label>
 									</div>
 								</div>
 							</div>
