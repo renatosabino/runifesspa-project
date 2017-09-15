@@ -44,7 +44,7 @@
 					<div class="card-title">
 						<h4 class="black-text center">Login</h4>
 					</div>
-					<form id="form-login" action="login" method="post">
+					<form id="form-login" action="login-servlet" method="post">
 						<div class="input-field">
 							<i class="material-icons prefix black-text">account_circle</i> 
 							<input class="black-text" id="icon_prefix" type="text" name="username"> 
@@ -75,7 +75,7 @@
 						</div>
 						<div class="center">
 							<a class="waves-effect waves-light z-depth-5 btn blue" onclick="document.getElementById('form-login').submit();"><i
-								class="material-icons right">send</i>Login</a>
+								 class="material-icons right">send</i>Login</a>
 							<div class="section">
 								<h6 class="black-text center">Ainda não possui um login?</h6>
 							</div>

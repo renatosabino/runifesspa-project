@@ -14,17 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebFilter("/pages/*")
-public class LoginFilter implements Filter{
+public class LoginFilter implements Filter
+{
 	private String path;
+
 	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void destroy() {}
 
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
-			throws IOException, ServletException {
+			throws IOException, ServletException 
+	{
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
 		
@@ -32,14 +32,12 @@ public class LoginFilter implements Filter{
 		
 		// Adicionar filtro de Login aqui !
 		
-		chain.doFilter(req, resp);
-		
+		chain.doFilter(req, resp);		
 	}
 
 	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
+	public void init(FilterConfig filterConfig) throws ServletException 
+	{
 		path = filterConfig.getServletContext().getContextPath();
-		
 	}
-
 }

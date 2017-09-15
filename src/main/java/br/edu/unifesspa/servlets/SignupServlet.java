@@ -16,20 +16,19 @@ import br.edu.unifesspa.persistence.JPAUtil;
 import br.edu.unifesspa.persistence.UsuarioRepository;
 
 @WebServlet("/signup-servlet")
-public class SignupServlet extends HttpServlet {
-
-	/**
-	 * 
-	 */
+public class SignupServlet extends HttpServlet 
+{
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+	{
 		EntityManager manager = JPAUtil.getEntityManager();
 
 		Usuario usuario = new Usuario();
 		usuario.setUser(req.getParameter("usuario"));
 		usuario.setSenha(req.getParameter("senha"));
+		usuario.setNivel(0);
 
 		DadosPessoais dados = new DadosPessoais();
 		dados.setNome(req.getParameter("nome"));
@@ -38,9 +37,14 @@ public class SignupServlet extends HttpServlet {
 		dados.setTelefone(req.getParameter("telefone"));
 		dados.setRg(req.getParameter("rg"));
 		dados.setCpf(req.getParameter("cpf"));
-		try {
-			dados.setDate(new SimpleDateFormat("yyy-MM-dd").parse(req.getParameter("nascimento")));
-		} catch (ParseException e) {
+	
+		try 
+		{
+			dados.setDate(new SimpleDateFormat("yyy-MM-dd").
+					parse(req.getParameter("nascimento")));
+		}
+		catch (ParseException e) 
+		{
 			e.printStackTrace();
 		}
 

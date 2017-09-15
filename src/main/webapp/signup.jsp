@@ -117,7 +117,8 @@
 								</div>
 							</div>
 							<div class="center">
-								<a class="waves-effect waves-light z-depth-5 btn blue" onclick="document.getElementById('form-signup').submit();">Cadastrar</a>
+								<a class="waves-effect waves-light z-depth-5 btn blue" 
+									onclick="document.getElementById('form-signup').submit();">Cadastrar</a>
 							</div>
 						</form>
 					</div>

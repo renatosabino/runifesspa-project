@@ -7,7 +7,8 @@ import javax.persistence.Persistence;
 public class JPAUtil {
 	private static EntityManagerFactory factory;
 
-	public static EntityManager getEntityManager() {
+	public static EntityManager getEntityManager() 
+	{
 		if (factory == null)
 			factory = Persistence.createEntityManagerFactory("runifesspa-project");
 
