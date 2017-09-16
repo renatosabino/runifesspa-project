@@ -39,7 +39,7 @@ public class DadosPessoais
 		this.id = id;
 	}
 
-	@Column(length = 60, nullable = false)
+	@Column(name = "dado_nome" , length = 60, nullable = false)
 	public String getNome() 
 	{
 		return nome;
@@ -50,7 +50,7 @@ public class DadosPessoais
 		this.nome = nome;
 	}
 
-	@Column(length = 12, nullable = false)
+	@Column(name = "dado_matricula", length = 12, nullable = false)
 	public String getMatricula() 
 	{
 		return matricula;
@@ -61,7 +61,7 @@ public class DadosPessoais
 		this.matricula = matricula;
 	}
 
-	@Column(length = 50, nullable = false)
+	@Column(name = "dado_email", length = 50, nullable = false)
 	public String getEmail() 
 	{
 		return email;
@@ -72,7 +72,7 @@ public class DadosPessoais
 		this.email = email;
 	}
 
-	@Column(length = 15, nullable = false)
+	@Column(name = "dado_telefone", length = 15, nullable = false)
 	public String getTelefone() 
 	{
 		return telefone;
@@ -83,7 +83,7 @@ public class DadosPessoais
 		this.telefone = telefone;
 	}
 
-	@Column(length = 15, nullable = false)
+	@Column(name = "dado_rg", length = 15, nullable = false)
 	public String getRg() 
 	{
 		return rg;
@@ -94,7 +94,7 @@ public class DadosPessoais
 		this.rg = rg;
 	}
 
-	@Column(length = 14, nullable = false)
+	@Column(name = "dado_cpf", length = 14, nullable = false)
 	public String getCpf() 
 	{
 		return cpf;
@@ -104,7 +104,8 @@ public class DadosPessoais
 	{
 		this.cpf = cpf;
 	}
-
+	
+	@Column(name = "dado_dataNasc")
 	@Temporal(TemporalType.DATE)
 	public Date getDate() 
 	{
@@ -115,7 +116,7 @@ public class DadosPessoais
 	{
 		this.date = date;
 	}
-
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	public Usuario getUsuario() 
 	{

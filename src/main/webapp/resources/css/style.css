@@ -87,4 +87,6 @@ textarea.materialize-textarea:focus:not([readonly]){
   will-change: top, opacity;
 }
 
-
+.tabs .tab a.active {
+    background-color: #90caf9;
+    color: #263238;

@@ -1,10 +1,14 @@
 package br.edu.unifesspa.model;
 
 import javax.persistence.Id;
+
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
@@ -17,6 +21,7 @@ public class Usuario
 	private String user;
 	private String senha;
 	private int nivel;
+	private List<Pedidos> pedido;
 	private DadosPessoais dadosPessoais;
 
 	@Id
@@ -31,7 +36,7 @@ public class Usuario
 		this.id = id;
 	}
 
-	@Column(length = 30, nullable = false)
+	@Column(name = "usu_user", length = 30, nullable = false)
 	public String getUser() 
 	{
 		return user;
@@ -41,8 +46,17 @@ public class Usuario
 	{
 		this.user = user;
 	}
+	
+	@OneToMany(mappedBy = "usuario")
+	public List<Pedidos> getPedido() {
+		return pedido;
+	}
 
-	@Column(length = 16, nullable = false)
+	public void setPedido(List<Pedidos> pedido) {
+		this.pedido = pedido;
+	}
+
+	@Column(name = "usu_pass", length = 16, nullable = false)
 	public String getSenha() 
 	{
 		return senha;
@@ -64,7 +78,7 @@ public class Usuario
 		this.dadosPessoais = dadosPessoais;
 	}
 	
-	@Column(length = 1, nullable = false)
+	@Column(name = "usu_nivel", length = 1, nullable = false)
 	public int getNivel() 
 	{
 		return nivel;
