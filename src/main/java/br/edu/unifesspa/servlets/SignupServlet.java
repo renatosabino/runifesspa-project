@@ -50,7 +50,7 @@ public class SignupServlet extends HttpServlet
 
 		dados.setUsuario(usuario);
 
-		new UsuarioRepository(manager).salvar(dados);
+		new UsuarioRepository(manager).salvarUsuario(dados);
 
 		resp.sendRedirect("index.jsp");
 	}

@@ -1,7 +1,10 @@
 package br.edu.unifesspa.persistence;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+
 import br.edu.unifesspa.model.DadosPessoais;
+import br.edu.unifesspa.model.Usuario;
 
 public class UsuarioRepository 
 {
@@ -13,11 +16,35 @@ public class UsuarioRepository
 		this.manager = manager;
 	}
 	
-	public void salvar(DadosPessoais usuario) 
+	public void salvarUsuario(DadosPessoais usuario) 
 	{
 		manager.getTransaction().begin();
 		manager.persist(usuario);
 		manager.getTransaction().commit();
 		manager.close();
-	}	
+	}
+	
+	public Usuario recoverUsuario(String login, String senha) 
+	{
+		manager.getTransaction().begin();
+		
+		Usuario usuario = null;
+
+		try 
+		{
+		 usuario = manager.createNamedQuery("Usuario.buscaPorUsuario", Usuario.class).
+				setParameter("user", login).
+				setParameter("senha", senha).
+				getSingleResult();
+		}
+		catch (NoResultException e) 
+		{
+			usuario = null;
+			System.out.println("|> Erro: " + e.getMessage());
+		}
+		
+		manager.close();
+		
+		return usuario;		
+	}
 }
