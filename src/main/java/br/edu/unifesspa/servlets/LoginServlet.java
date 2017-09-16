@@ -1,12 +1,16 @@
 package br.edu.unifesspa.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.edu.unifesspa.model.Usuario;
 import br.edu.unifesspa.persistence.JPAUtil;
 import br.edu.unifesspa.recover.RecoverUsuario;
 
@@ -25,7 +29,10 @@ public class LoginServlet extends HttpServlet
 		
 		EntityManager manager = JPAUtil.getEntityManager();
 		
-		new RecoverUsuario(manager).recoverUsuario(login, pass);
+		if (new RecoverUsuario(manager).recoverUsuario(login, pass) == null) 
+		{
+			resp.getWriter().println("Erro");
+		}else
 		
 		resp.sendRedirect("index.jsp");
 	}

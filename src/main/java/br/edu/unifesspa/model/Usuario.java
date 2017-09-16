@@ -1,12 +1,15 @@
 package br.edu.unifesspa.model;
 
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
+@NamedQuery(name="Usuario.buscaPorUsuario",
+query="SELECT u FROM Usuario u WHERE u.user = :user AND u.senha = :senha")
 @Entity
 public class Usuario 
 {

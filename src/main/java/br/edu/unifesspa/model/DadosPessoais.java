@@ -7,10 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@NamedQuery(name="DadosPessoais.buscaPorDadosPessoais",
+query="SELECT u FROM DadosPessoais u WHERE u.usuario = :usuario")
 @Entity
 public class DadosPessoais 
 {
