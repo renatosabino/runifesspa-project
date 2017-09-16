@@ -1,17 +1,13 @@
 package br.edu.unifesspa.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
-import javax.persistence.EntityManager;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.ServletException;
+import javax.persistence.EntityManager;
+import javax.servlet.annotation.WebServlet;
+import br.edu.unifesspa.persistence.JPAUtil;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import br.edu.unifesspa.model.Usuario;
-import br.edu.unifesspa.persistence.JPAUtil;
 import br.edu.unifesspa.recover.RecoverUsuario;
 
 @WebServlet("/login-servlet")
@@ -31,7 +27,10 @@ public class LoginServlet extends HttpServlet
 		
 		if (new RecoverUsuario(manager).recoverUsuario(login, pass) == null) 
 		{
-			resp.getWriter().println("Erro");
+			resp.getWriter().println("<html>"
+					+ "<head></head>"
+					+ "<body>"
+					+ "<script type=\"text/javascript\">alert(\"Usuário não cadastrado!\");</script></body></html>");
 		}else
 		
 		resp.sendRedirect("index.jsp");

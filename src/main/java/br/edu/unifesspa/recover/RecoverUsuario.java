@@ -1,10 +1,8 @@
 package br.edu.unifesspa.recover;
 
+import br.edu.unifesspa.model.Usuario;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
-
-import br.edu.unifesspa.model.DadosPessoais;
-import br.edu.unifesspa.model.Usuario;
 
 public class RecoverUsuario 
 {
@@ -20,25 +18,22 @@ public class RecoverUsuario
 		manager.getTransaction().begin();
 		
 		Usuario usuario = null;
-		try {
+
+		try 
+		{
 		 usuario = manager.createNamedQuery("Usuario.buscaPorUsuario", Usuario.class).
-				setParameter("user", login).setParameter("senha", senha).getSingleResult();
-				
-		System.out.println("Email: " + usuario.getDadosPessoais().getEmail() + "\n|> Nome" +
-				usuario.getDadosPessoais().getNome());
+				setParameter("user", login).
+				setParameter("senha", senha).
+				getSingleResult();
 		}
 		catch (NoResultException e) 
 		{
 			usuario = null;
+			System.out.println("|> Erro: " + e.getMessage());
 		}
 		
-	//	System.out.println("Teste " + usuario.getId() + " " + usuario.getUser() + " " + usuario.getSenha());
-	//	System.out.println("Buscando...");
-	//	Usuario usuario = manager.find(Usuario.class, 1L);
-	//  System.out.println(usuario.getUser());
-		
-		
 		manager.close();
+		
 		return usuario;		
 	}
 }

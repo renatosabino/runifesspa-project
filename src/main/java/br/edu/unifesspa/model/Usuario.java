@@ -1,10 +1,10 @@
 package br.edu.unifesspa.model;
 
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 

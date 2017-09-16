@@ -1,16 +1,16 @@
 package br.edu.unifesspa.model;
 
 import java.util.Date;
-import javax.persistence.CascadeType;
+import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.OneToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.CascadeType;
+import javax.persistence.TemporalType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @NamedQuery(name="DadosPessoais.buscaPorDadosPessoais",
 query="SELECT u FROM DadosPessoais u WHERE u.usuario = :usuario")
