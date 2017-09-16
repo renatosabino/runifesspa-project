@@ -13,27 +13,28 @@
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 </head>
 <body class="light-blue lighten-5">
+
 	<!--HEADER/NAVBAR-->
 	<nav class="nav-extended blue">
-	<div class="nav-wrapper">
-		<a href="index.jsp" class="brand-logo center">R-UNIFESSPA</a> <a
-			href="#" data-activates="menu-mobile" class="button-collapse"><i
-			class="material-icons">menu</i></a>
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a
-				class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
-				href="#modalsobre"><i class="material-icons right">info_outline</i>Sobre</a></li>
-			<li><a
-				class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
-				href="#modalcontato"><i class="material-icons right">phone</i>Contato</a></li>
-		</ul>
-		<ul id="menu-mobile" class="side-nav">
-			<li><a class="btn modal-trigger blue" href="#modalsobre"><i
-					class="material-icons right">info_outline</i>Sobre</a></li>
-			<li><a class="btn modal-trigger blue" href="#modalcontato"><i
-					class="material-icons right">phone</i>Contato</a></li>
-		</ul>
-	</div>
+		<div class="nav-wrapper">
+			<a href="index.jsp" class="brand-logo center">R-UNIFESSPA</a> <a
+				href="#" data-activates="menu-mobile" class="button-collapse"><i
+				class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a
+					class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
+					href="#modalsobre"><i class="material-icons right">info_outline</i>Sobre</a></li>
+				<li><a
+					class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
+					href="#modalcontato"><i class="material-icons right">phone</i>Contato</a></li>
+			</ul>
+			<ul id="menu-mobile" class="side-nav">
+				<li><a class="btn modal-trigger blue" href="#modalsobre"><i
+						class="material-icons right">info_outline</i>Sobre</a></li>
+				<li><a class="btn modal-trigger blue" href="#modalcontato"><i
+						class="material-icons right">phone</i>Contato</a></li>
+			</ul>
+		</div>
 	</nav>
 
 	<div class="row">
@@ -44,7 +45,8 @@
 						<h4 class="black-text center">Cadastro</h4>
 					</div>
 					<div class="row">
-						<form id="form-signup" action="signup-servlet" method="post" class="col s12">
+						<form id="form-signup" action="signup-servlet" method="post"
+							class="col s12">
 							<div class="row">
 								<div class="input-field">
 									<i class="material-icons prefix black-text">account_circle</i>
@@ -117,7 +119,7 @@
 								</div>
 							</div>
 							<div class="center">
-								<a class="waves-effect waves-light z-depth-5 btn blue" 
+								<a class="waves-effect waves-light z-depth-5 btn blue"
 									onclick="document.getElementById('form-signup').submit();">Cadastrar</a>
 							</div>
 						</form>
@@ -151,26 +153,30 @@
 	</div>
 
 	<!-- JQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="resources/js/jquery-3.2.1.js"></script>
 	<!-- Materialize JS -->
 	<script src="resources/js/materialize.js"></script>
+	<!-- JQuery Mask -->
+	<script src="resources/js/jquery.mask.min.js"></script>
 
 	<script>
 		//menu mobile
 		$(".button-collapse").sideNav();
-	</script>
-
-	<script>
+	
 		//Modalsobre
 		$(document).ready(function() {
 			$('#modalsobre').modal();
 		});
-	</script>
 
-	<script>
 		//Modalcontato
 		$(document).ready(function() {
 			$('#modalcontato').modal();
+		});
+
+		$(document).ready(function() {
+			$('input[name=cpf]').mask('000.000.000-00', {reverse:true});
+			$('input[name=matricula]').mask('000000000000', {reverse:true});
+			$('input[name=telefone]').mask('(00) 90000-0000');
 		});
 	</script>
 </body>

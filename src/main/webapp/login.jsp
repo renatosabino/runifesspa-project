@@ -16,25 +16,25 @@
 
 	<!--HEADER/NAVBAR-->
 	<nav class="nav-extended blue">
-	<div class="nav-wrapper">
-		<a href="index.jsp" class="brand-logo center">R-UNIFESSPA</a> <a
-			href="#" data-activates="menu-mobile" class="button-collapse"><i
-			class="material-icons">menu</i></a>
-		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a
-				class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
-				href="#modalsobre"><i class="material-icons right">info_outline</i>Sobre</a></li>
-			<li><a
-				class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
-				href="#modalcontato"><i class="material-icons right">phone</i>Contato</a></li>
-		</ul>
-		<ul id="menu-mobile" class="side-nav">
-			<li><a class="btn modal-trigger blue" href="#modalsobre"><i
-					class="material-icons right">info_outline</i>Sobre</a></li>
-			<li><a class="btn modal-trigger blue" href="#modalcontato"><i
-					class="material-icons right">phone</i>Contato</a></li>
-		</ul>
-	</div>
+		<div class="nav-wrapper">
+			<a href="index.jsp" class="brand-logo center">R-UNIFESSPA</a> <a
+				href="#" data-activates="menu-mobile" class="button-collapse"><i
+				class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a
+					class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
+					href="#modalsobre"><i class="material-icons right">info_outline</i>Sobre</a></li>
+				<li><a
+					class="btn modal-trigger blue z-depth-0 waves-effect waves-light"
+					href="#modalcontato"><i class="material-icons right">phone</i>Contato</a></li>
+			</ul>
+			<ul id="menu-mobile" class="side-nav">
+				<li><a class="btn modal-trigger blue" href="#modalsobre"><i
+						class="material-icons right">info_outline</i>Sobre</a></li>
+				<li><a class="btn modal-trigger blue" href="#modalcontato"><i
+						class="material-icons right">phone</i>Contato</a></li>
+			</ul>
+		</div>
 	</nav>
 
 	<div class="row">
@@ -46,13 +46,14 @@
 					</div>
 					<form id="form-login" action="login-servlet" method="post">
 						<div class="input-field">
-							<i class="material-icons prefix black-text">account_circle</i> 
-							<input class="black-text" id="icon_prefix" type="text" name="username"> 
+							<i class="material-icons prefix black-text">account_circle</i> <input
+								class="black-text" id="icon_prefix" type="text" name="username">
 							<label class="grey-text" for="icon_prefix">Usuário</label>
 						</div>
 						<div class="input-field">
-							<i class="material-icons prefix black-text">lock</i> <input
-								type="password" name ="pass"> <label class="grey-text" for="lock">Senha</label>
+							<i class="material-icons prefix black-text">lock</i> <input id=""
+								type="password" name="pass"> <label class="grey-text"
+								for="lock">Senha</label>
 						</div>
 						<div class="row section center">
 							<form action="#" class="col s8">
@@ -74,8 +75,9 @@
 							</form>
 						</div>
 						<div class="center">
-							<a class="waves-effect waves-light z-depth-5 btn blue" onclick="document.getElementById('form-login').submit();"><i
-								 class="material-icons right">send</i>Login</a>
+							<a class="waves-effect waves-light z-depth-5 btn blue"
+								onclick="document.getElementById('form-login').submit();"><i
+								class="material-icons right">send</i>Login</a>
 							<div class="section">
 								<h6 class="black-text center">Ainda não possui um login?</h6>
 							</div>
@@ -112,23 +114,19 @@
 	</div>
 
 	<!-- JQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="resources/js/jquery-3.2.1.js"></script>
 	<!-- Materialize JS -->
 	<script src="resources/js/materialize.js"></script>
 
 	<script>
 		//menu mobile
 		$(".button-collapse").sideNav();
-	</script>
 
-	<script>
 		//Modalsobre
 		$(document).ready(function() {
 			$('#modalsobre').modal();
 		});
-	</script>
 
-	<script>
 		//Modalcontato
 		$(document).ready(function() {
 			$('#modalcontato').modal();
