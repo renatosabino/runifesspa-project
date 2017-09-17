@@ -1,7 +1,6 @@
 package br.edu.unifesspa.model;
 
 import java.util.Date;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -72,5 +71,4 @@ public class Recarga {
 			return false;
 		return true;
 	}
-
 }

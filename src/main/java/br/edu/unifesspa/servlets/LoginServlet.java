@@ -33,23 +33,10 @@ public class LoginServlet extends HttpServlet {
 		EntityManager manager = JPAUtil.getEntityManager();
 
 		Usuario usuario = new UsuarioRepository(manager).recoverUsuario(login, pass);
-		
-
-		// System.out.println(new
-		// PedidoRepository(JPAUtil.getEntityManager()).recoverPedido(1L).getTipoPedido());
-
-		// Pedidos pedidos = new Pedidos();
-		// pedidos.setTipoPedido(2);
-		// pedidos.setDataPedido(new Date(2017, 9, 2));
-		// pedidos.setUsuario(usuario);
-		// pedidos.setHorarioPedido(new Date());
-		// pedidos.setValidatorPedido("ok");
-
-		// new PedidoRepository(JPAUtil.getEntityManager()).savePedido(pedidos);
 
 		if (usuario != null) {
 			session = req.getSession();
-			session.setAttribute("usuario", usuario);
+			session.setAttribute("user", usuario);
 			session.setMaxInactiveInterval(10 * 30);
 			resp.sendRedirect("index.jsp");
 		} else {

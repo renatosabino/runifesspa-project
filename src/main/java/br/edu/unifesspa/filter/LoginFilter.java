@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.edu.unifesspa.model.Usuario;
+
 @WebFilter("/pages/*")
 public class LoginFilter implements Filter {
 	private String path;
@@ -29,7 +31,7 @@ public class LoginFilter implements Filter {
 
 		HttpSession session = request.getSession();
 
-		String usuario = (String) session.getAttribute("user");
+		Usuario usuario = (Usuario) session.getAttribute("user");
 
 		if (usuario == null) {
 			session.invalidate();
