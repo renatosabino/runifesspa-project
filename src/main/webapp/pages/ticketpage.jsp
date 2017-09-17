@@ -116,28 +116,30 @@
 		<div class="card z-depth-5">
 			<div class="card-content">
 				<h5 class="center">Comprar Ticket</h5>
-				<div class="form">
-					<div class="input-field"name"Quemvce">
-						<select>
-							<option value="" disabled selected>Quem você é?</option>
-							<option value="1">Discente</option>
-							<option value="2">Docente/Técnico</option>
-						</select>
+				<form action="comprar-servlet" method="post">
+					<div class="form">
+						<div class="input-field">
+							<select name="tipo-usuario">
+								<option value="" disabled selected>Quem você é?</option>
+								<option value="1">Discente</option>
+								<option value="2">Docente/Técnico</option>
+							</select>
+						</div>
+						<div class="input-field">
+							<select name="tipo-refeicao">
+								<option value="" disabled selected>Escolha a refeição</option>
+								<option value="1">Café da Manhã</option>
+								<option value="2">Almoço</option>
+								<option value="2">Jantar</option>
+							</select>
+						</div>
 					</div>
-					<div class="input-field" name="refeicao">
-						<select>
-							<option value="" disabled selected>Escolha a refeição</option>
-							<option value="1">Café da Manhã</option>
-							<option value="2">Almoço</option>
-							<option value="2">Jantar</option>
-						</select>
+					<div class="row center">
+						<button
+							class="btn waves-effect waves-light blue centered z-depth-5"
+							type="submit" name="action">Comprar ticket</button>
 					</div>
-				</div>
-				<div class="row center">
-					<button
-						class="btn waves-effect waves-light blue centered z-depth-5"
-						type="submit" name="action">Gerar Tickets</button>
-				</div>
+				</form>
 			</div>
 		</div>
 		</section>
@@ -170,15 +172,16 @@
 					<h4 class="center">
 						Adicionar crédito:
 						</h5>
-						<form>
+						<form id="recarregar-form" action="recarregar-servlet" method="post">
 							<div class="input-field">
-								<input class="black-text" name="telefone" type="tel"> <label
-									class="grey-text" for="telefone">Valor</label>
+								<input class="black-text" name="valor-recarga" type="text"> <label
+									class="grey-text" for="valor">Valor</label>
 							</div>
-								<div class="center">
-									<a class="btn modal-trigger blue waves-effect waves-light z-depth-5"
-										href="#modalccredito">Recarregar</a>
-								</div>
+							<div class="center">
+								<a
+									class="btn modal-trigger blue waves-effect waves-light z-depth-5"
+									onclick="document.getElementById('recarregar-form').submit();">Recarregar</a>
+							</div>
 						</form>
 				</div>
 			</div>

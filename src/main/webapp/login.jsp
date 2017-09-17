@@ -55,25 +55,6 @@
 								type="password" name="pass"> <label class="grey-text"
 								for="lock">Senha</label>
 						</div>
-						<div class="row section center">
-							<form action="#" class="col s8">
-								<div class="row">
-									<div class="col s4">
-										<form action="#">
-											<p>
-												<input type="checkbox" id="test5" /> <label for="test5">Lembrar
-													senha?</label>
-											</p>
-										</form>
-									</div>
-									<div class="col s4">
-										<label><h6>
-												<a href="#">Esqueceu a senha?</a>
-											</h6></label>
-									</div>
-								</div>
-							</form>
-						</div>
 						<div class="center">
 							<a class="waves-effect waves-light z-depth-5 btn blue"
 								onclick="document.getElementById('form-login').submit();"><i

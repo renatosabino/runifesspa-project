@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -30,7 +31,7 @@ public class Pedidos {
 		this.id = id;
 	}
 	
-	@Column(name = "ped_data")
+	@Column(name = "ped_data", nullable = false)
 	@Temporal(TemporalType.DATE)
 	public Date getDataPedido() {
 		return dataPedido;
@@ -40,7 +41,8 @@ public class Pedidos {
 		this.dataPedido = dataPedido;
 	}
 	
-	@Column(name = "ped_horario")
+	@Column(name = "ped_horario", nullable = false)
+	@Temporal(TemporalType.TIME)
 	public Date getHorarioPedido() {
 		return horarioPedido;
 	}
@@ -49,7 +51,7 @@ public class Pedidos {
 		this.horarioPedido = horarioPedido;
 	}
 	
-	@Column(name = "ped_tipo")
+	@Column(name = "ped_tipo", nullable = false)
 	public int getTipoPedido() {
 		return tipoPedido;
 	}
@@ -58,7 +60,7 @@ public class Pedidos {
 		this.tipoPedido = tipoPedido;
 	}
 	
-	@Column(name = "ped_validator")
+	@Column(name = "ped_validator", nullable = false, length = 50)
 	public String getValidatorPedido() {
 		return validatorPedido;
 	}

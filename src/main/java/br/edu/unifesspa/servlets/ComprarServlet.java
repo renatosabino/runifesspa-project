@@ -8,16 +8,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/pages/recarregar-servlet")
-public class RecarregarServlet extends HttpServlet{
+@WebServlet("/pages/comprar-servlet")
+public class ComprarServlet extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String valor = req.getParameter("valor-recarga");
 		
-		System.out.println(valor);
+		String tUsuario = req.getParameter("tipo-usuario");
+		String tRefeicao = req.getParameter("tipo-refeicao");
 		
 		resp.sendRedirect("ticketpage.jsp");
+		
 	}
 
 }

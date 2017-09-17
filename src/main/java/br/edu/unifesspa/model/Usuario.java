@@ -4,6 +4,7 @@ import javax.persistence.Id;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -23,6 +24,7 @@ public class Usuario
 	private int nivel;
 	private List<Pedidos> pedido;
 	private DadosPessoais dadosPessoais;
+	private Recarga recarga;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,7 +49,7 @@ public class Usuario
 		this.user = user;
 	}
 	
-	@OneToMany(mappedBy = "usuario")
+	@OneToMany(mappedBy = "usuario", targetEntity = Pedidos.class, cascade = CascadeType.ALL)
 	public List<Pedidos> getPedido() {
 		return pedido;
 	}
@@ -87,6 +89,15 @@ public class Usuario
 	public void setNivel(int nivel) 
 	{
 		this.nivel = nivel;
+	}
+	
+	@OneToOne(mappedBy = "usuario")
+	public Recarga getRecarga() {
+		return recarga;
+	}
+
+	public void setRecarga(Recarga recarga) {
+		this.recarga = recarga;
 	}
 
 	@Override

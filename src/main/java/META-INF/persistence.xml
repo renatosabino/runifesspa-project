@@ -8,11 +8,13 @@
         <class>br.edu.unifesspa.model.Usuario</class>
         <class>br.edu.unifesspa.model.DadosPessoais</class>
         <class>br.edu.unifesspa.model.Pedidos</class>
-                
+        <class>br.edu.unifesspa.model.Recarga</class>
+
+        
         <properties>
         	<property name="hibernate.show_sql" value="true" />
   	 		<property name="hibernate.format_sql" value="true" />
-  			<property name="hibernate.hbm2ddl.auto" value="update" />
+  			<property name="hibernate.hbm2ddl.auto" value="create" />
   		</properties>
 	</persistence-unit>
 	
