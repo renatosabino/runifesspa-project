@@ -58,78 +58,6 @@
 				class="modal-action modal-close waves-effect waves-green btn-flat ">OK</a>
 		</div>
 	</div>
-	<!-- Modal Cartão de crédito -->
-	<div id="modalccredito" class="modal modal-fixed-footer">
-		<div class="modal-content">
-			<h4>Insira os dados do cartão</h4>
-			<div class="row">
-				<form class="col s12">
-					<div class="row">
-						<div class="input-field">
-							<i class="material-icons prefix black-text">call_to_action</i> <input
-								class="black-text" id="ncartao" type="number"> <label
-								class="grey-text" for="ncartao">Número do cartão</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-field">
-							<i class="material-icons prefix black-text">person</i> <input
-								id="nomeTitular" type="text"> <label class="grey-text"
-								for="nomeTitular">Nome do titular</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s6">
-							<div class="input-field">
-								<i class="material-icons prefix black-text">event_available</i>
-								<input class="black-text" id="datavalidade" type="number">
-								<label class="grey-text" for="datavalidade">Data de
-									validade</label>
-							</div>
-						</div>
-						<div class="col s6">
-							<div class="input-field">
-								<i class="material-icons prefix black-text">lock</i> <input
-									class="black-text" id="cvv" type="number"> <label
-									class="grey-text" for="cvv">Código de segurança</label>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col s6 offset-m3">
-							<div class="input-field">
-								<i class="material-icons prefix black-text">lock</i> <input
-									class="black-text" id="senhacartao" type="password"> <label
-									class="grey-text" for="senhacartao">Senha</label>
-							</div>
-						</div>
-					</div>
-					<div class="center">
-						<a class="waves-effect waves-light z-depth-5 btn blue">Confirmar</a>
-					</div>
-				</form>
-			</div>
-		</div>
-		<div class="modal-footer">
-			<a href="#!"
-				class="modal-action modal-close waves-effect waves-green btn-flat ">fechar</a>
-		</div>
-	</div>
-
-	<!-- Modal Boleto Bancário -->
-	<div id="modalboleto" class="modal modal-fixed-footer">
-		<div class="modal-content">
-			<h4>Boleto</h4>
-			<div class="center">
-				<a class="waves-effect waves-light z-depth-5 btn blue">Gerar
-					Boleto</a>
-			</div>
-		</div>
-		<div class="modal-footer">
-			<a href="#!"
-				class="modal-action modal-close waves-effect waves-green btn-flat ">fechar</a>
-		</div>
-	</div>
 
 	<!-- TELA TICKETS PREÇOS-->
 	<div class="row container section">
@@ -196,7 +124,7 @@
 							<option value="2">Docente/Técnico</option>
 						</select>
 					</div>
-					<div class="input-field"name="refeicao">
+					<div class="input-field" name="refeicao">
 						<select>
 							<option value="" disabled selected>Escolha a refeição</option>
 							<option value="1">Café da Manhã</option>
@@ -243,44 +171,15 @@
 						Adicionar crédito:
 						</h5>
 						<form>
-							<p>
-								<input type="checkbox" id="dez" /> <label for="dez">R$10,00</label>
-							</p>
+							<div class="input-field">
+								<input class="black-text" name="telefone" type="tel"> <label
+									class="grey-text" for="telefone">Valor</label>
+							</div>
+								<div class="center">
+									<a class="btn modal-trigger blue waves-effect waves-light z-depth-5"
+										href="#modalccredito">Recarregar</a>
+								</div>
 						</form>
-						<form>
-							<p>
-								<input type="checkbox" id="vinte" /> <label for="vinte">R$20,00</label>
-							</p>
-						</form>
-						<form>
-							<p>
-								<input type="checkbox" id="trinta" /> <label for="trinta">R$30,00</label>
-							</p>
-						</form>
-						<form>
-							<p>
-								<input type="checkbox" id="cinquenta" /> <label for="cinquenta">R$50,00</label>
-							</p>
-						</form>
-						<form>
-							<p>
-								<input type="checkbox" id="cem" /> <label for="cem">R$100,00</label>
-							</p>
-						</form>
-				</div>
-				<div class="row">
-					<div class="center">
-						<a
-							class="btn modal-trigger blue waves-effect waves-light z-depth-5"
-							href="#modalccredito">Cartão de Crédito</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="center">
-						<a
-							class="btn modal-trigger blue waves-effect waves-light z-depth-5"
-							href="#modalboleto">Boleto Bancário</a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -341,16 +240,6 @@
 		//Modalcontato
 		$(document).ready(function() {
 			$('#modalcontato').modal();
-		});
-
-		//Modalccredito
-		$(document).ready(function() {
-			$('#modalccredito').modal();
-		});
-
-		//Modalboleto
-		$(document).ready(function() {
-			$('#modalboleto').modal();
 		});
 
 		$(document).ready(function() {
