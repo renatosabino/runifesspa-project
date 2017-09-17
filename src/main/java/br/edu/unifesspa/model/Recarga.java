@@ -34,7 +34,7 @@ public class Recarga {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	@Column(name = "rec_vencimento", nullable = false)
+	@Column(name = "rec_vencimento")
 	@Temporal(TemporalType.DATE)
 	public Date getVencimento() {
 		return vencimento;

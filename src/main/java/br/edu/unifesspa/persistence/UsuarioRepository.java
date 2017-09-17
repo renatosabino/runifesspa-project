@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 
 import br.edu.unifesspa.model.DadosPessoais;
+import br.edu.unifesspa.model.Recarga;
 import br.edu.unifesspa.model.Usuario;
 
 public class UsuarioRepository 
@@ -16,10 +17,11 @@ public class UsuarioRepository
 		this.manager = manager;
 	}
 	
-	public void salvarUsuario(DadosPessoais usuario) 
+	public void salvarUsuario(DadosPessoais usuario, Recarga recarga) 
 	{
 		manager.getTransaction().begin();
 		manager.persist(usuario);
+		manager.persist(recarga);
 		manager.getTransaction().commit();
 		manager.close();
 	}

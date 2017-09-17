@@ -38,7 +38,8 @@ public class LoginServlet extends HttpServlet {
 			session = req.getSession();
 			session.setAttribute("user", usuario);
 			session.setMaxInactiveInterval(10 * 30);
-			resp.sendRedirect("index.jsp");
+			req.setAttribute("saldo", usuario.getRecarga().getValor());
+			resp.sendRedirect("pages/ticketpage.jsp");
 		} else {
 			resp.sendRedirect("login.jsp");
 		}

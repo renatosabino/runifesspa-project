@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.edu.unifesspa.model.DadosPessoais;
+import br.edu.unifesspa.model.Recarga;
 import br.edu.unifesspa.model.Usuario;
 import br.edu.unifesspa.persistence.JPAUtil;
 import br.edu.unifesspa.persistence.UsuarioRepository;
+import br.edu.unifesspa.utils.DateTimeUtil;
 
 @WebServlet("/signup-servlet")
 public class SignupServlet extends HttpServlet 
@@ -37,7 +39,11 @@ public class SignupServlet extends HttpServlet
 		dados.setTelefone(req.getParameter("telefone"));
 		dados.setRg(req.getParameter("rg"));
 		dados.setCpf(req.getParameter("cpf"));
-	
+		
+		Recarga recarga = new Recarga();
+		recarga.setValor(0);
+		recarga.setVencimento(DateTimeUtil.getInstance().getTimeDate());
+		
 		try 
 		{
 			dados.setDate(new SimpleDateFormat("yyy-MM-dd").
@@ -49,8 +55,9 @@ public class SignupServlet extends HttpServlet
 		}
 
 		dados.setUsuario(usuario);
+		recarga.setUsuario(usuario);
 
-		new UsuarioRepository(manager).salvarUsuario(dados);
+		new UsuarioRepository(manager).salvarUsuario(dados, recarga);
 
 		resp.sendRedirect("index.jsp");
 	}

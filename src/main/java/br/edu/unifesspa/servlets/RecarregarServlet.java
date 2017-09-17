@@ -8,14 +8,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.edu.unifesspa.model.Recarga;
+import br.edu.unifesspa.model.Usuario;
+import br.edu.unifesspa.persistence.JPAUtil;
+import br.edu.unifesspa.persistence.RecarregarRepository;
+import br.edu.unifesspa.utils.DateTimeUtil;
+
 @WebServlet("/pages/recarregar-servlet")
-public class RecarregarServlet extends HttpServlet{
-	
+public class RecarregarServlet extends HttpServlet {
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String valor = req.getParameter("valor-recarga");
+		double valor = Double.parseDouble(req.getParameter("valor-recarga"));
 		
-		System.out.println(valor);
+		Usuario usuario = (Usuario) req.getSession().getAttribute("user");
+		
+		Recarga recarga = new RecarregarRepository(JPAUtil.getEntityManager()).recuperarRecarga(usuario.getRecarga().getId());
+		new RecarregarRepository(JPAUtil.getEntityManager()).
+			updateRecarga(usuario.getRecarga().getId(), recarga.getValor() + valor);
 		
 		resp.sendRedirect("ticketpage.jsp");
 	}

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -156,7 +157,7 @@
 										Seu saldo atual:
 										</h5>
 										<h5 class="center" id="saldo">
-											10,00
+											${saldo}
 											</h3>
 								</div>
 							</div>
@@ -172,10 +173,11 @@
 					<h4 class="center">
 						Adicionar crédito:
 						</h5>
-						<form id="recarregar-form" action="recarregar-servlet" method="post">
+						<form id="recarregar-form" action="recarregar-servlet"
+							method="post">
 							<div class="input-field">
-								<input class="black-text" name="valor-recarga" type="text"> <label
-									class="grey-text" for="valor">Valor</label>
+								<input class="black-text" name="valor-recarga" type="text">
+								<label class="grey-text" for="valor">Valor</label>
 							</div>
 							<div class="center">
 								<a
