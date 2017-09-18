@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import br.edu.unifesspa.model.Usuario;
+import br.edu.unifesspa.persistence.AdminRepository;
 import br.edu.unifesspa.persistence.JPAUtil;
 import br.edu.unifesspa.persistence.UsuarioRepository;
 
@@ -30,12 +31,18 @@ public class LoginServlet extends HttpServlet {
 
 		Usuario usuario = new UsuarioRepository(manager).recoverUsuario(login, pass);
 
-		if (usuario != null) {
+		if (usuario != null && usuario.getNivel() == 0) {
 			session = req.getSession();
 			session.setAttribute("user", usuario);
 			session.setAttribute("saldo", usuario.getRecarga().getValor());
+			new AdminRepository(JPAUtil.getEntityManager()).validarTicket("12345");
 			session.setMaxInactiveInterval(10 * 30);
 			resp.sendRedirect("pages/ticketpage.jsp");
+		} else if (usuario != null && usuario.getNivel() == 1){
+			session = req.getSession();
+			session.setAttribute("user", usuario);
+			session.setMaxInactiveInterval(10 * 30);
+			resp.sendRedirect("admin/admin.jsp");
 		} else {
 			resp.sendRedirect("login.jsp");
 		}

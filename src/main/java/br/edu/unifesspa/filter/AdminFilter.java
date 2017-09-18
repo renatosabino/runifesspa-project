@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import br.edu.unifesspa.model.Usuario;
+
 @WebFilter("/admin/*")
 public class AdminFilter implements Filter {
 
@@ -30,7 +32,13 @@ public class AdminFilter implements Filter {
 
 		HttpSession session = request.getSession();
 		
-		chain.doFilter(req, resp);
+		Usuario usuario = (Usuario) session.getAttribute("user");
+
+		if (usuario != null && usuario.getNivel() == 1) {
+			chain.doFilter(req, resp);
+		} else {
+			response.sendRedirect(this.path + "/login.jsp");
+		}
 	}
 
 	@Override

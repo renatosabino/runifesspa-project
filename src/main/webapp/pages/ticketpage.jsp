@@ -230,6 +230,8 @@
 	<script src="../resources/js/jquery-3.2.1.js"></script>
 	<!-- Materialize JS -->
 	<script src="../resources/js/materialize.js"></script>
+	<!-- JQuery Mask -->
+	<script src="../resources/js/jquery.mask.min.js"></script>
 
 	<script>
 		//menu mobile
@@ -247,6 +249,9 @@
 
 		$(document).ready(function() {
 			$('select').material_select();
+		});
+		$(document).ready(function(){
+			$('input[name=valor-recarga]').mask('00000000000000,00', {reverse: true});
 		});
 	</script>
 </body>

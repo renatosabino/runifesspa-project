@@ -33,11 +33,10 @@ public class LoginFilter implements Filter {
 
 		Usuario usuario = (Usuario) session.getAttribute("user");
 
-		if (usuario == null) {
-			session.invalidate();
-			response.sendRedirect(this.path + "/login.jsp");
-		} else {
+		if (usuario != null && usuario.getNivel() == 0) {
 			chain.doFilter(req, resp);
+		} else {
+			response.sendRedirect(this.path + "/login.jsp");
 		}
 	}
 

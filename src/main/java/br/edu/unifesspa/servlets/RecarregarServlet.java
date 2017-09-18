@@ -26,7 +26,7 @@ public class RecarregarServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		session = req.getSession();
 
-		double valor = Double.parseDouble(req.getParameter("valor-recarga"));
+		double valor = Double.parseDouble(req.getParameter("valor-recarga").replace(',', '.'));
 		double saldo = (double) session.getAttribute("saldo");
 		double valorRecarga = saldo + valor;
 

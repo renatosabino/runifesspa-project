@@ -72,7 +72,7 @@
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">perm_identity</i>
-										<input class="black-text" name="matricula" type="number">
+										<input class="black-text" name="matricula" type="text">
 										<label class="grey-text" for="matricula">Matricula</label>
 									</div>
 								</div>
@@ -88,7 +88,7 @@
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">phone</i> <input
-											class="black-text" name="telefone" type="tel"> <label
+											class="black-text" name="telefone" type="text"> <label
 											class="grey-text" for="telefone">Telefone</label>
 									</div>
 								</div>
@@ -97,7 +97,7 @@
 								<div class="col s6">
 									<div class="input-field">
 										<i class="material-icons prefix black-text">subtitles</i> <input
-											class="black-text" name="rg" type="number"> <label
+											class="black-text" name="rg" type="text"> <label
 											class="grey-text" for="rg">RG</label>
 									</div>
 								</div>
@@ -176,6 +176,7 @@
 		$(document).ready(function() {
 			$('input[name=cpf]').mask('000.000.000-00', {reverse:true});
 			$('input[name=matricula]').mask('000000000000', {reverse:true});
+			$('input[name=rg]').mask('000000000000000')
 			$('input[name=telefone]').mask('(00) 90000-0000');
 		});
 	</script>
