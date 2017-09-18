@@ -1,22 +1,18 @@
 package br.edu.unifesspa.servlets;
 
 import java.io.IOException;
-import java.security.MessageDigest;
-import java.util.Date;
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.ServletException;
 import javax.persistence.EntityManager;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-
-import br.edu.unifesspa.model.Pedidos;
-import br.edu.unifesspa.model.Usuario;
-import br.edu.unifesspa.persistence.JPAUtil;
-import br.edu.unifesspa.persistence.PedidoRepository;
-import br.edu.unifesspa.persistence.UsuarioRepository;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import br.edu.unifesspa.model.Usuario;
+import br.edu.unifesspa.persistence.JPAUtil;
+import br.edu.unifesspa.persistence.UsuarioRepository;
 
 @WebServlet("/login-servlet")
 public class LoginServlet extends HttpServlet {
@@ -37,8 +33,8 @@ public class LoginServlet extends HttpServlet {
 		if (usuario != null) {
 			session = req.getSession();
 			session.setAttribute("user", usuario);
+			session.setAttribute("saldo", usuario.getRecarga().getValor());
 			session.setMaxInactiveInterval(10 * 30);
-			req.setAttribute("saldo", usuario.getRecarga().getValor());
 			resp.sendRedirect("pages/ticketpage.jsp");
 		} else {
 			resp.sendRedirect("login.jsp");

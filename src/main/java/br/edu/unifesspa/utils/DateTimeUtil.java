@@ -16,9 +16,15 @@ public class DateTimeUtil {
 		}
 		return instance;
 	}
-	
+
 	public Date getTimeDate() {
 		return Calendar.getInstance().getTime();
 	}
-	
+
+	public Date getValidateRecarga() {
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.DAY_OF_MONTH, 30);
+		Date date = calendar.getTime();
+		return date;
+	}
 }

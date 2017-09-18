@@ -1,0 +1,27 @@
+.panel-ticket {
+border: 2px solid #000000;
+width: 400px;
+height: 200px;
+padding: 20px;
+}
+.title-ticket {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+}
+.text-ticket {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+.subtitle-ticket {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.cod-ticket {
+	text-align: center;
+	font-family: monospace;
+	font-size: 15px;
+}

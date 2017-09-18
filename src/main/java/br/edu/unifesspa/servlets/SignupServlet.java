@@ -42,7 +42,7 @@ public class SignupServlet extends HttpServlet
 		
 		Recarga recarga = new Recarga();
 		recarga.setValor(0);
-		recarga.setVencimento(DateTimeUtil.getInstance().getTimeDate());
+		recarga.setVencimento(null);
 		
 		try 
 		{

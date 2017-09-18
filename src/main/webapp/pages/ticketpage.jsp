@@ -153,12 +153,10 @@
 						<div class="row">
 							<div class="col s12">
 								<div class="input-field inline">
-									<h4 class="center">
-										Seu saldo atual:
-										</h5>
-										<h5 class="center" id="saldo">
-											${saldo}
-											</h3>
+									<h4 class="center">Seu saldo atual:</h4>
+									<h5 class="center" id="saldo">
+										<span>R$ ${saldo}</span>
+									</h5>
 								</div>
 							</div>
 						</div>

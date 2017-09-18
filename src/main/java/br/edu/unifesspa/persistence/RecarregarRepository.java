@@ -3,6 +3,7 @@ package br.edu.unifesspa.persistence;
 import javax.persistence.EntityManager;
 
 import br.edu.unifesspa.model.Recarga;
+import br.edu.unifesspa.utils.DateTimeUtil;
 
 public class RecarregarRepository {
 
@@ -32,6 +33,7 @@ public class RecarregarRepository {
 		manager.getTransaction().begin();
 		Recarga recarga = manager.find(Recarga.class, id);
 		recarga.setValor(valor);
+		recarga.setVencimento(DateTimeUtil.getInstance().getValidateRecarga());
 		manager.getTransaction().commit();
 		manager.close();
 	}
