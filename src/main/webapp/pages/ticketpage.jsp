@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,7 +17,7 @@
 	<!--HEADER/NAVBAR-->
 	<nav class="nav-extended blue">
 	<div class="nav-wrapper">
-		<a href="index.jsp" class="brand-logo center">R-UNIFESSPA</a> <a
+		<a href="../index.jsp" class="brand-logo center">R-UNIFESSPA</a> <a
 			href="#" data-activates="menu-mobile" class="button-collapse"><i
 			class="material-icons">menu</i></a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -131,7 +131,7 @@
 								<option value="" disabled selected>Escolha a refeição</option>
 								<option value="1">Café da Manhã</option>
 								<option value="2">Almoço</option>
-								<option value="2">Jantar</option>
+								<option value="3">Jantar</option>
 							</select>
 						</div>
 					</div>
@@ -155,7 +155,7 @@
 								<div class="input-field inline">
 									<h4 class="center">Seu saldo atual:</h4>
 									<h5 class="center" id="saldo">
-										<span>R$ ${saldo}</span>
+										<span>R$ ${sessionScope.saldo}</span>
 									</h5>
 								</div>
 							</div>

@@ -28,13 +28,14 @@ public class RecarregarRepository {
 		return recarga;
 	}
 	
-	public void updateRecarga(int id, double valor)
+	public Recarga updateRecarga(int id, double valor)
 	{
 		manager.getTransaction().begin();
 		Recarga recarga = manager.find(Recarga.class, id);
-		recarga.setValor(valor);
+		recarga.setValor(recarga.getValor() + valor);
 		recarga.setVencimento(DateTimeUtil.getInstance().getValidateRecarga());
 		manager.getTransaction().commit();
 		manager.close();
+		return recarga;
 	}
 }

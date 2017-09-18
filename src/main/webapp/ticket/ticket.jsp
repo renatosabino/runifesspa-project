@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
+<!DOCTYPE html PUBLIC>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -12,7 +13,9 @@
 		<h1 class="title-ticket">Ticket R-Unifesspa</h1>
 		<p class="text-ticket">Apresente este ticket ao estabelecimento para trocar pela sua refeição!</p>
 		<h3 class="subtitle-ticket">Código de validação:</h3>
-		<p class="cod-ticket"></p>
+		<p class="cod-ticket">${cod}</p>
 	</div>
+	<br/>
+	<a href="ticketpage.jsp">Voltar</a>
 </body>
 </html>
