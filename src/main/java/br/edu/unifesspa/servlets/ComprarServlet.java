@@ -29,7 +29,6 @@ public class ComprarServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		int tUsuario = Integer.parseInt(req.getParameter("tipo-usuario"));
 		int tRefeicao = Integer.parseInt(req.getParameter("tipo-refeicao"));
 		String validator = GenerateUUID.getInstance().generate();
 		Usuario usuario = (Usuario) req.getSession().getAttribute("user");

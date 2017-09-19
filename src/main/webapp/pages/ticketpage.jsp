@@ -70,7 +70,6 @@
 			<div class="card-tabs blue">
 				<ul class="tabs tabs-fixed-width">
 					<li class="tab"><a href="#Discentes">Discentes</a></li>
-					<li class="tab"><a href="#DocentesTecnicos">Docentes/Técnicos</a></li>
 				</ul>
 			</div>
 			<div class="card-content blue lighten-3">
@@ -92,24 +91,6 @@
 						</tbody>
 					</table>
 				</div>
-				<div id="DocentesTecnicos">
-					<table class="table bordered">
-						<thead>
-							<tr>
-								<th>Café da Manhã</th>
-								<th>Almoço</th>
-								<th>Jantar</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>R$4,00</td>
-								<td>R$5,00</td>
-								<td>R$6,00</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
 			</div>
 		</div>
 
@@ -119,13 +100,6 @@
 				<h5 class="center">Comprar Ticket</h5>
 				<form action="comprar-servlet" method="post">
 					<div class="form">
-						<div class="input-field">
-							<select name="tipo-usuario">
-								<option value="" disabled selected>Quem você é?</option>
-								<option value="1">Discente</option>
-								<option value="2">Docente/Técnico</option>
-							</select>
-						</div>
 						<div class="input-field">
 							<select name="tipo-refeicao">
 								<option value="" disabled selected>Escolha a refeição</option>

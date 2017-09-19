@@ -40,7 +40,6 @@
 			<ul class="tabs tabs-transparent">
 				<li class="tab"><a href="#PaginaPrincipal">Principal</a></li>
 				<li class="tab"><a href="#Cardapio">Cardápio</a></li>
-				<li class="tab"><a href="Ticket.html" target="_blank">Ticket</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -80,21 +79,18 @@
 					<ul class="slides">
 						<li><img src="resources/img/ContratoRU.jpg">
 							<div class="caption center-align">
-								<h3>This is our big Tagline!</h3>
-								<h5 class="light grey-text text-lighten-3">Here's our small
-									slogan.</h5>
+								<h3>Projeto da área externa do futuro Restaurante Universitário!</h3>
+								<h5 class="light grey-text text-lighten-3">Projeto externo do futuro...</h5>
 							</div></li>
 						<li><img src="resources/img/FotoRUExteno.jpg">
 							<div class="caption left-align">
-								<h3>Left Aligned Caption</h3>
-								<h5 class="light grey-text text-lighten-3">Here's our small
-									slogan.</h5>
+								<h3>Projeto da área externa do futuro Restaurante Universitário!</h3>
+								<h5 class="light grey-text text-lighten-3">Projeto externo do futuro...</h5>
 							</div></li>
 						<li><img src="resources/img/ru.jpg">
 							<div class="caption right-align">
-								<h3>Right Aligned Caption</h3>
-								<h5 class="light grey-text text-lighten-3">Here's our small
-									slogan.</h5>
+								<h3>Refeições boas são direitos de todos os discetes</h3>
+								<h5 class="light grey-text text-lighten-3">Coma bem...</h5>
 							</div></li>
 					</ul>
 				</div>
@@ -397,7 +393,33 @@
 							<i class="material-icons">filter_drama</i>Café da Manhã
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -405,7 +427,33 @@
 							<i class="material-icons">place</i>Almoço
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -413,7 +461,33 @@
 							<i class="material-icons">whatshot</i>Jantar
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 				</ul>
@@ -426,7 +500,33 @@
 							<i class="material-icons">filter_drama</i>Café da Manhã
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -442,7 +542,33 @@
 							<i class="material-icons">whatshot</i>Jantar
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 				</ul>
@@ -455,7 +581,33 @@
 							<i class="material-icons">filter_drama</i>Café da Manhã
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -463,7 +615,33 @@
 							<i class="material-icons">place</i>Almoço
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -471,7 +649,33 @@
 							<i class="material-icons">whatshot</i>Jantar
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 				</ul>
@@ -484,7 +688,33 @@
 							<i class="material-icons">filter_drama</i>Café da Manhã
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -492,7 +722,33 @@
 							<i class="material-icons">place</i>Almoço
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 					<li>
@@ -500,16 +756,39 @@
 							<i class="material-icons">whatshot</i>Jantar
 						</div>
 						<div class="collapsible-body">
-							<span>Lorem ipsum dolor sit amet.</span>
+							<table class="responsive-table bordered highlight centered">
+								<thead>
+									<tr>
+										<th>Pratos Principais</th>
+										<th>Acompanhamentos</th>
+										<th>Vegetarianos</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-
-	<div id="Ticket" class="col s12"></div>
-
 	<!--FOOTER-->
 	<footer class="page-footer blue lighten-2">
 		<div class="container">
